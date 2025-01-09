@@ -1,13 +1,19 @@
+import discountCalculations.Calculate;
+
 public class Main {
     public static void main(String[] args) {
 
-        double[] wagesReported = ConvertsInputsTo.arrayOfDoubles(args);
+        for(String salaryReported : args) {
 
-        double[] inssDiscount = Calculates.inssDiscount(wagesReported);
+            double salary = Double.parseDouble(salaryReported);
 
-        double[] incomeTaxDiscount = Calculates.incomeTaxDiscount(wagesReported);
+            double inssDiscount = Calculate.inssDiscount(salary);
 
-        salaryInformation.printSalariesAndDeductions(wagesReported, inssDiscount, incomeTaxDiscount);
+            double incomeTaxDiscount = Calculate.incomeTaxDiscount(salary);
+
+            salaryInformation.printSalaryAndDeductions(salary, inssDiscount, incomeTaxDiscount);
+
+        }
 
     }
 }
