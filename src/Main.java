@@ -1,4 +1,4 @@
-import discountCalculations.Calculate;
+import inss.Inss;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,9 +7,9 @@ public class Main {
 
             double salary = Double.parseDouble(salaryReported);
 
-            double inssDiscount = Calculate.inssDiscount(salary);
+            double inssDiscount = Inss.calculateDiscount(salary);
 
-            double incomeTaxDiscount = Calculate.incomeTaxDiscount(salary);
+            double incomeTaxDiscount = incomeTax.calculateDiscount(salary);
 
             salaryInformation.printSalaryAndDeductions(salary, inssDiscount, incomeTaxDiscount);
 
