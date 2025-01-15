@@ -1,3 +1,4 @@
+import incomeTax.IncomeTax;
 import inss.Inss;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
 
             double inssDiscount = Inss.calculateDiscount(salary);
 
-            double incomeTaxDiscount = incomeTax.calculateDiscount(salary);
+            double incomeTaxDiscount = IncomeTax.calculateDiscount(salary);
 
             salaryInformation.printSalaryAndDeductions(salary, inssDiscount, incomeTaxDiscount);
 
