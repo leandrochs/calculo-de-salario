@@ -17,7 +17,7 @@ enum incomeTaxDiscountRanges {
         this.discountPercentage = discountPercentage;
     }
 
-    public static double getDiscountPercentage(double salary) {
+    static double getDiscountPercentage(double salary) {
         for(incomeTaxDiscountRanges range : incomeTaxDiscountRanges.values()) {
             if (salary >= range.lowerLimit && salary <= range.upperLimit) {
                 return range.discountPercentage;
