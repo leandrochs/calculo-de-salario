@@ -4,7 +4,12 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class SalaryInfo {
-    public static void print(int position, double salary, double inssDiscount, double incomeTaxDiscount) {
+    public static void print(
+            int position,
+            double salary,
+            double inssDiscount,
+            double incomeTaxDiscount
+    ) {
         double netSalary = calculateNetSalary(salary, inssDiscount, incomeTaxDiscount);
         printMessages(position, salary, inssDiscount, incomeTaxDiscount, netSalary);
     }
