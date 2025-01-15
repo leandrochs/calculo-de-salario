@@ -1,8 +1,11 @@
 import incomeTax.IncomeTax;
 import inss.Inss;
+import salaryInfo.SalaryInfo;
 
 public class Main {
     public static void main(String[] args) {
+
+        int position = 0;
 
         for(String salaryReported : args) {
 
@@ -12,9 +15,7 @@ public class Main {
 
             double incomeTaxDiscount = IncomeTax.calculateDiscount(salary);
 
-            salaryInformation.printSalaryAndDeductions(salary, inssDiscount, incomeTaxDiscount);
-
+            SalaryInfo.print(++position, salary, inssDiscount, incomeTaxDiscount);
         }
-
     }
 }
