@@ -25,7 +25,7 @@ enum inssDiscountRanges {
     }
 
     static double getDiscountPercentage(double salary) {
-        for(inssDiscountRanges range : inssDiscountRanges.values()) {
+        for(inssDiscountRanges range : values()) {
             if (salary >= range.lowerLimit && salary <= range.upperLimit) {
                 return range.discountPercentage;
             }
